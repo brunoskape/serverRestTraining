@@ -1,30 +1,14 @@
 package tests.login;
 
 import factory.Login;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utils.BaseTest;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.hamcrest.Matchers.*;
 
 import static io.restassured.RestAssured.given;
 
 public class LoginTest extends BaseTest {
-
-
-    private final String email;
-    private final String password;
-
-    public LoginTest(String email, String password) {
-        this.email = email;
-        this.password = password;
-
-    }
 
 
     @Test

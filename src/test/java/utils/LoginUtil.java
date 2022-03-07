@@ -15,8 +15,6 @@ public class LoginUtil {
 
          Login input = new Login("fulano@qa.com", "teste");
 
-
-
         String token =   given()
                 .contentType(ContentType.JSON)
                 .body(input)
