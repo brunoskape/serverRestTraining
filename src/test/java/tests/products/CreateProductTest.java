@@ -15,7 +15,7 @@ public class CreateProductTest extends BaseTest {
     @Test
     public void insertProduct(){
 
-        Product product = new Product("mouse pad gamer1020", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad gamer199", "120", "mouse pad gamer com rgb","3");
 
           given()
                                .headers("Authorization", login.getToken())
@@ -31,7 +31,7 @@ public class CreateProductTest extends BaseTest {
     @Test
     public void insertProductAndCheckIfProductWasInserted(){
 
-        Product product = new Product("mouse pad gamer40", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad gamer41", "120", "mouse pad gamer com rgb","3");
 
         String productInput = given()
                 .headers("Authorization", login.getToken())
@@ -48,13 +48,13 @@ public class CreateProductTest extends BaseTest {
                .get("/produtos?_id=" + productInput)
                .then()
                .statusCode(200)
-               .body("produtos.nome", hasItem("mouse pad gamer40"));
+               .body("produtos.nome", hasItem("mouse pad gamer41"));
 
     }
     @Test
     public void insertProductWithSameName(){
 
-        Product product = new Product("mouse pad gamer516", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad gamer5126", "120", "mouse pad gamer com rgb","3");
 
         given()
                 .headers("Authorization", login.getToken())
