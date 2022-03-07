@@ -17,8 +17,8 @@ import static io.restassured.RestAssured.given;
 public class LoginTest extends BaseTest {
 
 
-    private  String email;
-    private  String password;
+    private final String email;
+    private final String password;
 
     public LoginTest(String email, String password) {
         this.email = email;
@@ -26,9 +26,6 @@ public class LoginTest extends BaseTest {
 
     }
 
-    public LoginTest() {
-
-    }
 
     @Test
     public void LoginTestSucess(){
