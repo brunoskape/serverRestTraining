@@ -1,9 +1,9 @@
-package tests.login;
+package tests.integration.login;
 
-import factory.Login;
+import tests.factory.Login;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
-import utils.BaseTest;
+import tests.utils.BaseTest;
 import static org.hamcrest.Matchers.*;
 
 import static io.restassured.RestAssured.given;

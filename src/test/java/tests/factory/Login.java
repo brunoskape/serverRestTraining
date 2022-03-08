@@ -1,4 +1,4 @@
-package factory;
+package tests.factory;
 
 public class Login {
 

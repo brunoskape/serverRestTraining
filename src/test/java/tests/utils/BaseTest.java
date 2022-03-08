@@ -1,12 +1,10 @@
-package utils;
+package tests.utils;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
-
-import static utils.Constant.*;
 
 public class BaseTest implements Constant{
 

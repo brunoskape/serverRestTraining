@@ -1,11 +1,7 @@
-package utils;
+package tests.utils;
 
-import factory.Login;
+import tests.factory.Login;
 import io.restassured.http.ContentType;
-import org.testng.annotations.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 

@@ -1,14 +1,14 @@
-package tests.products;
+package tests.integration.products;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
-import utils.BaseTest;
-import utils.LoginUtil;
+import tests.utils.BaseTest;
+import tests.utils.LoginUtil;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ListProductTest extends BaseTest {
+public class GetProductTest extends BaseTest {
     LoginUtil login = new LoginUtil();
 
 

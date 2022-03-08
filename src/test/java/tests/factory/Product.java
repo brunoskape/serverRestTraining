@@ -1,4 +1,4 @@
-package factory;
+package tests.factory;
 
 import com.github.javafaker.Faker;
 
@@ -8,7 +8,7 @@ public class Product {
     private String preco;
     private String descricao;
     private String quantidade;
-    //private final Faker faker; falta implementar o faker para os dados
+
 
     public Product(String nome, String preco, String descricao, String quantidade){
         this.nome = nome;
@@ -17,7 +17,6 @@ public class Product {
         this.quantidade = quantidade;
 
     }
-
 
     public String getNome() {
         return nome;

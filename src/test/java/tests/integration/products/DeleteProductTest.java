@@ -1,10 +1,10 @@
-package tests.products;
+package tests.integration.products;
 
-import factory.Product;
+import tests.factory.Product;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
-import utils.BaseTest;
-import utils.LoginUtil;
+import tests.utils.BaseTest;
+import tests.utils.LoginUtil;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;

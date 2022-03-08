@@ -1,21 +1,21 @@
-package tests.products;
+package tests.integration.products;
 
-import factory.Product;
+import tests.factory.Product;
 import org.testng.annotations.Test;
-import utils.BaseTest;
-import utils.LoginUtil;
+import tests.utils.BaseTest;
+import tests.utils.LoginUtil;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class CreateProductTest extends BaseTest {
+public class PostProductTest extends BaseTest {
 
     LoginUtil login = new LoginUtil();
 
     @Test
     public void insertProduct(){
 
-        Product product = new Product("mouse pad gamer199", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad gamer1229", "120", "mouse pad gamer com rgb","3");
 
           given()
                                .headers("Authorization", login.getToken())
