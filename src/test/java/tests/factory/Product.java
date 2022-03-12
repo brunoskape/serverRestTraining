@@ -1,20 +1,18 @@
 package tests.factory;
 
-import com.github.javafaker.Faker;
 
 public class Product {
 
     private String nome;
-    private String preco;
+    private Integer preco;
     private String descricao;
-    private String quantidade;
+    private Integer quantidade;
 
-
-    public Product(String nome, String preco, String descricao, String quantidade){
-        this.nome = nome;
-        this.preco = preco;
-        this.descricao = descricao;
-        this.quantidade = quantidade;
+    public Product(String name, Integer price, String description, Integer quantity){
+        this.nome = name;
+        this.preco = price;
+        this.descricao = description;
+        this.quantidade = quantity;
 
     }
 
@@ -26,11 +24,11 @@ public class Product {
         this.nome = nome;
     }
 
-    public String getPreco() {
+    public Integer getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(Integer preco) {
         this.preco = preco;
     }
 
@@ -42,11 +40,12 @@ public class Product {
         this.descricao = descricao;
     }
 
-    public String getQuantidade() {
+    public Integer getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
+
 }
