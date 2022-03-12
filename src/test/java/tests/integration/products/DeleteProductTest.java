@@ -17,7 +17,7 @@ public class DeleteProductTest extends BaseTest {
     @Test
     public void deleteProduct(){
 
-        Product product = new Product("mouse pad delete6", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad delete6", 120, "mouse pad gamer com rgb",3);
 
    String productId =
            given()
@@ -45,7 +45,7 @@ public class DeleteProductTest extends BaseTest {
     @Test
     public void deleteProductWithoutToken(){
 
-        Product product = new Product("mouse pad delete7", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad delete7", 120, "mouse pad gamer com rgb",3);
 
         String productId =
                 given()
