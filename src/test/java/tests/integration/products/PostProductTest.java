@@ -1,5 +1,6 @@
 package tests.integration.products;
 
+import com.github.javafaker.Faker;
 import tests.factory.Product;
 import org.testng.annotations.Test;
 import tests.utils.BaseTest;
@@ -12,26 +13,32 @@ public class PostProductTest extends BaseTest {
 
     LoginUtil login = new LoginUtil();
 
+    Faker faker = new Faker();
+    String name = faker.commerce().productName();
+    int price = faker.number().numberBetween(1, 100);
+    String description = faker.commerce().material();
+    int quantity = faker.number().randomDigitNotZero();
+
     @Test
-    public void insertProduct(){
+    public void insertProduct() {
 
-        Product product = new Product("mouse pad gamer1229", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product(name, price, description, quantity);
 
-          given()
-                               .headers("Authorization", login.getToken())
-                               .body(product)
-                               .when()
-                                .post("/produtos")
-                                .then()
-                                .statusCode(201)
-                                .body("message", is("Cadastro realizado com sucesso"));
+        given()
+                .headers("Authorization", login.getToken())
+                .body(product)
+                .when()
+                .post("/produtos")
+                .then()
+                .statusCode(201)
+                .body("message", is("Cadastro realizado com sucesso")).log().all();
 
     }
 
     @Test
     public void insertProductAndCheckIfProductWasInserted(){
 
-        Product product = new Product("mouse pad gamer41", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product(name, price, description, quantity);
 
         String productInput = given()
                 .headers("Authorization", login.getToken())
@@ -48,13 +55,13 @@ public class PostProductTest extends BaseTest {
                .get("/produtos?_id=" + productInput)
                .then()
                .statusCode(200)
-               .body("produtos.nome", hasItem("mouse pad gamer41"));
+               .body("produtos._id", hasItem(productInput)).log();
 
     }
     @Test
     public void insertProductWithSameName(){
 
-        Product product = new Product("mouse pad gamer5126", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product("mouse pad gamer12", 120, "mouse pad gamer com rgb",3);
 
         given()
                 .headers("Authorization", login.getToken())
@@ -81,7 +88,7 @@ public class PostProductTest extends BaseTest {
     @Test
     public void insertProductWithoutToken(){
 
-        Product product = new Product("mouse pad gamer", "120", "mouse pad gamer com rgb","3");
+        Product product = new Product(name, price, description, quantity);
 
         given()
                 .body(product)
