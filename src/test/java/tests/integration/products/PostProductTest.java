@@ -55,7 +55,7 @@ public class PostProductTest extends BaseTest {
                .get("/produtos?_id=" + productInput)
                .then()
                .statusCode(200)
-               .body("produtos._id", hasItem(productInput)).log();
+               .body("produtos._id", hasItem(productInput));
 
     }
     @Test
