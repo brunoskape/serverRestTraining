@@ -1,9 +1,7 @@
 package tests.integration.products;
 
-import com.github.javafaker.Faker;
 import tests.factory.Product;
 import io.restassured.http.ContentType;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import tests.utils.BaseTest;
 import tests.utils.LoginUtil;
@@ -13,8 +11,8 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-//implementar
-public class PutProductTest extends BaseTest {
+
+public class UpdateProductTest extends BaseTest {
 
     LoginUtil login = new LoginUtil();
     ProductUtil product = new ProductUtil();

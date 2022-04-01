@@ -9,7 +9,7 @@ import tests.utils.LoginUtil;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class PostProductTest extends BaseTest {
+public class CreateProductTest extends BaseTest {
 
     LoginUtil login = new LoginUtil();
 

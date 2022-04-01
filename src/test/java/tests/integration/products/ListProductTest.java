@@ -8,7 +8,7 @@ import tests.utils.LoginUtil;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class GetProductTest extends BaseTest {
+public class ListProductTest extends BaseTest {
     LoginUtil login = new LoginUtil();
 
 
