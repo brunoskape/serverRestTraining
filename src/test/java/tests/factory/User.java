@@ -5,7 +5,14 @@ public class User {
     private String nome;
     private String email;
     private String password;
-    private Boolean administrador;
+    private String administrador;
+
+    public User(String nome, String email, String password, String administrador) {
+        this.nome = nome;
+        this.email = email;
+        this.password = password;
+        this.administrador = administrador;
+    }
 
     public String getNome() {
         return nome;
@@ -31,11 +38,12 @@ public class User {
         this.password = password;
     }
 
-    public Boolean getAdministrador() {
+
+    public String getAdministrador() {
         return administrador;
     }
 
-    public void setAdministrador(Boolean administrador) {
+    public void setAdministrador(String administrador) {
         this.administrador = administrador;
     }
 }
